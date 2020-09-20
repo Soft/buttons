@@ -1,0 +1,86 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: system, -apple-system, "San Francisco", Roboto, sans;
+    user-select: none;
+}
+
+:root {
+    --main-bg: #e1e2e1;
+    --header-bg: #512da8;
+    --header-fg: #ffffff;
+    --button-bg: #9c27b0;
+    --button-hover-bg: #9c27b0;
+    --button-active-bg: #9c27b0;
+    --button-fg: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --main-bg: #121212;
+        --header-bg: #1f1f1f;
+        --header-fg: #ffffff;
+        --button-bg: #9c27b0;
+        --button-hover-bg: #9c27b0;
+        --button-active-bg: #9c27b0;
+        --button-fg: #1f1f1f;
+    }
+}
+
+body {
+    background: var(--main-bg);
+}
+
+header {
+    background: var(--header-bg);
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    color: var(--header-fg);
+    margin: 0;
+    font-weight: normal;
+    padding: 10px 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+main button {
+    all: unset;
+    background: var(--button-bg);
+    color: var(--button-fg) ;
+    box-sizing: border-box;
+    margin: 5px 10px;
+    min-height: 60px;
+    border-radius: 3px;
+    font-weight: bold;
+    text-align: center;
+    display: table-cell;
+    padding: 10px;
+    cursor: pointer;
+}
+
+main button:hover {
+    background: var(--button-hover-bg);
+}
+
+main button:active {
+    background: var(--button-active-bg);
+}
+
+@media (min-width: 640px) {
+    main {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    main button {
+        margin: 5px 5px;
+        min-width: 120px;
+    }
+}

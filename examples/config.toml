@@ -1,0 +1,10 @@
+address = "0.0.0.0:8080"
+title = "Actions"
+
+[[buttons]]
+label = "First Action"
+command = "echo 'First Action'"
+
+[[buttons]]
+label = "Second Action"
+command = "echo 'Second Action'"
