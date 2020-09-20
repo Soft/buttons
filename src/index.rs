@@ -2,7 +2,7 @@ use lazy_static::*;
 use serde::Serialize;
 use std::default::Default;
 use std::sync::Arc;
-use tera::{Context, Tera};
+use tera::Tera;
 use uuid::Uuid;
 use warp::http::StatusCode;
 
@@ -19,7 +19,7 @@ lazy_static! {
 }
 
 #[derive(Serialize)]
-struct State<'a> {
+struct Context<'a> {
     pub title: &'a str,
     pub buttons: Vec<Button<'a>>,
 }
@@ -51,7 +51,7 @@ pub async fn handle(
         })
         .collect();
 
-    let state = match Context::from_serialize(&State {
+    let state = match tera::Context::from_serialize(&Context {
         title: &state.title,
         buttons,
     }) {

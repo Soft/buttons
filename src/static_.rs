@@ -24,13 +24,6 @@ lazy_static! {
             },
         );
         m.insert(
-            "app.webmanifest",
-            Resource {
-                content_type: "application/manifest+json",
-                content: include_bytes!("../frontend/app.webmanifest"),
-            },
-        );
-        m.insert(
             "icons/buttons-72.png",
             Resource {
                 content_type: "image/png",

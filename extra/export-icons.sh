@@ -5,7 +5,6 @@ main() {
     [[ -z "$input" ]] && return 1
     output=$(basename "$input")
     output=${output%%.*}
-    echo "$output"
     for dim in 72 96 128 144 152 192; do
         inkscape --export-png "${output}-${dim}.png" \
             --export-width "$dim" \

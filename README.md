@@ -8,7 +8,7 @@
 
 `buttons` is a small progressive web app that allows users to execute commands
 from a predetermined set on the server. `buttons` exposes a simple mobile-first
-web UI with a button for each command. Tapping the button will cause the
+web UI with a button for each command. Tapping a button will cause the
 associated command to be executed.
 
 ⚠ **Important** ⚠: You should obviously think carefully about what commands are
